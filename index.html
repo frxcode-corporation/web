@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frxcode Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary -blue: #0068b5;
+            --dark-gray: #333;
+            --light-gray: #f5f5f5;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* 导航栏样式 */
+        .navbar {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        /* 主视觉区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://via.placeholder.com/1920x800') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-top: 60px;
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        /* 产品展示区 */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 4rem 5%;
+            background: var(--light-gray);
+            padding-top: 8rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2rem;
+            color: var(--dark-gray);
+            width: 100%;
+        }
+        .product-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .product-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                margin-bottom: 3rem;
+            }
+            .products {
+                padding: 3rem 5%;
+            }
+        }
+        /* 页脚样式 */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 5%;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#products">产品</a>
+                <a href="#Other downloads">其他下载</a>
+                <a href="#support">支持</a>
+                <a href="https://shequ.codemao.cn/user/1756323783">关于我们</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>创新科技未来</h1>
+            <p>欢迎来到Frxcode。</p>
+            <a href="https://space.bilibili.com/3546635265116208?spm_id_from=333.1007.0.0" target="_blank" style="text-decoration: none;">
+               <button style="margin-top: 2rem; padding: 1rem 2rem; background: #0068b5; color: blue; border: none; border-radius: 5px; cursor: pointer;">
+                    探索更多
+                </button>
+            </a>
+        </div>
+    </section>
+    
+    <section class="products" id="products">
+        <h2 class="section-title">产品</h2>
+        
+        <div class="product-cards">
+            <div class="product-card">
+                <h3>Fusion OS</h3>
+                <p>下载链接：<a href="https://www.123912.com/s/yju7jv-Flsk3" target="_blank">点击下载</a></p>
+            </div>
+            
+            <div class="product-card">
+                <h3>VMiner OS</h3>
+                <p>下载链接：<a href="https://www.123912.com/s/yju7jv-glsk3" target="_blank">点击下载</a></p>
+            </div>
+            
+            <div class="product-card">
+                <h3>VMware Update电脑安全测试器</h3>
+                <p>下载链接：<a href="https://www.123912.com/s/yju7jv-Ylsk3" target="_blank">点击下载</a></p>
+            </div>
+            
+            <div class="product-card">
+                <h3>AppxStore</h3>
+                <p>下载链接：<a href="https://1828859877.share.123pan.cn/123pan/yju7jv-ksM13" target="_blank">点击下载</a></p>
+            </div>
+
+            <div class="product-card">
+                <h3>Windows CTTools</h3>
+                <p>下载链接：<a href="https://www.123912.com/s/yju7jv-Xlsk3" target="_blank">点击下载</a></p>
+            </div>
+
+            <div class="product-card">
+                <h3>VMware Visual VM</h3>
+                <p>下载链接：<a href="https://www.123912.com/s/yju7jv-slsk3" target="_blank">点击下载</a></p>
+            </div>
+        </div>
+     </section>
+ </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+           <ul class="footer-links">
+                <p><a href="https://space.bilibili.com/3546635265116208?spm_id_from=333.337.0.0">bilibili</a></p>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+         <section class="Other downloads" id="Other downloads">
+                  <h4>快速链接&其他下载</h4>
+                <ul class="footer-links">
+                    <p><a href="https://shequ.codemao.cn/work_shop/27107">编程猫社区</a></p>
+                    
+                </ul>
+              <ul class="footer-links">
+                   <p><a href="https://www.microsoft.com/zh-cn/software-download/windows10">下载Windows 10</a></p>
+
+               </ul>
+             <ul class="footer-links">
+                   <p><a href="https://www.microsoft.com/zh-cn/software-download/windows11">下载Windows 11</a></p>
+
+              </ul>
+             <ul class="footer-links">
+                   <p><a href="https://space.bilibili.com/3493110082439389/?spm_id_from=333.788.upinfo.head.click">网页指导：龙ger_longer(点击访问他的b站)</a></p>
+
+              </ul>
+            </div>
+        </div>
+</section>
+        <p>Copyright© Frxcode.Inc/此名违规了嗷 2024-2026，All rights reserved.</p>
+    </footer>
+</body>
+</html>
